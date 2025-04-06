@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Alias Profile - CampusConnect</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/proxy-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/proxy-profile.js" defer></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="page-container page-active">
+            <div class="page-header">
+                <h2>Create Your Alias</h2>
+                <p>This is how others will see you until you both agree to reveal identities</p>
+            </div>
+            <div class="profile-form-container">
+                <form id="proxy-profile-form">
+                    <div class="avatar-selection">
+                        <h3>Select Avatar</h3>
+                        <div class="avatar-grid">
+                            <div class="avatar-item" data-avatar="avatar1">
+                                <div class="avatar avatar1">
+                                    <img src="images/avatars/avatar1.png" alt="Avatar 1">
+                                </div>
+                            </div>
+                            <div class="avatar-item" data-avatar="avatar2">
+                                <div class="avatar avatar2">
+                                    <img src="images/avatars/avatar2.png" alt="Avatar 2">
+                                </div>
+                            </div>
+                            <div class="avatar-item" data-avatar="avatar3">
+                                <div class="avatar avatar3">
+                                    <img src="images/avatars/avatar3.png" alt="Avatar 3">
+                                </div>
+                            </div>
+                            <div class="avatar-item" data-avatar="avatar4">
+                                <div class="avatar avatar4">
+                                    <img src="images/avatars/avatar4.png" alt="Avatar 4">
+                                </div>
+                            </div>
+                            <div class="avatar-item" data-avatar="avatar5">
+                                <div class="avatar avatar5">
+                                    <img src="images/avatars/avatar5.png" alt="Avatar 5">
+                                </div>
+                            </div>
+                            <div class="avatar-item" data-avatar="avatar6">
+                                <div class="avatar avatar6">
+                                    <img src="images/avatars/avatar6.png" alt="Avatar 6">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="proxy-name">Choose Alias Name</label>
+                        <input type="text" id="proxy-name" placeholder="e.g., Tony Stark, Natasha Romanoff" required>
+                        <small>Choose a name from your favorite movie/series characters</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Interests (Select at least 3)</label>
+                        <div class="interests-container">
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-movies" class="interest-checkbox">
+                                <label for="interest-movies" class="interest-label">Movies</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-music" class="interest-checkbox">
+                                <label for="interest-music" class="interest-label">Music</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-books" class="interest-checkbox">
+                                <label for="interest-books" class="interest-label">Books</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-sports" class="interest-checkbox">
+                                <label for="interest-sports" class="interest-label">Sports</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-gaming" class="interest-checkbox">
+                                <label for="interest-gaming" class="interest-label">Gaming</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-tech" class="interest-checkbox">
+                                <label for="interest-tech" class="interest-label">Technology</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-art" class="interest-checkbox">
+                                <label for="interest-art" class="interest-label">Art</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-cooking" class="interest-checkbox">
+                                <label for="interest-cooking" class="interest-label">Cooking</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-travel" class="interest-checkbox">
+                                <label for="interest-travel" class="interest-label">Travel</label>
+                            </div>
+                            <div class="interest-tag">
+                                <input type="checkbox" id="interest-fashion" class="interest-checkbox">
+                                <label for="interest-fashion" class="interest-label">Fashion</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Short Bio</label>
+                        <textarea id="bio" rows="3" maxlength="150" placeholder="Describe yourself in a few words..."></textarea>
+                        <div class="char-count"><span id="bio-character-count">0</span>/150</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Save & Continue</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p id="loading-message">Loading...</p>
+        </div>
+    </div>
+</body>
+</html>
